@@ -8,8 +8,15 @@ document.getElementById("sendButton").disabled = true;
 connection.on("ReceiveMessage", function (user, message) {
     //TODO tänne oman tekstin korostaminen
     var msg = message.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    var encodedMsg = user + " says " + msg;
+    //Yritin vielä erikseen korostaa user:ia, jäi kesken:
+    //var encodedMsg = "&lt;b&gt;" + user + "&lt; /b&gt;: " + msg;
+    //var encodedMsg = user + ": " + msg;
+    //var writerspan = document.createElement("span");
+    //writerspan.classList.add("font-weight-bold");
+    var encodedMsg =  user+ ": " + msg;
+    
     var li = document.createElement("li");
+    //li.appendChild("writerspan");
     li.textContent = encodedMsg;
     
     var writer = document.getElementById("userInput").value;
