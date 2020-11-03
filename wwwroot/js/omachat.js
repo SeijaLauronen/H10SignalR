@@ -11,6 +11,14 @@ connection.on("ReceiveMessage", function (user, message) {
     var encodedMsg = user + " says " + msg;
     var li = document.createElement("li");
     li.textContent = encodedMsg;
+    
+    var writer = document.getElementById("userInput").value;
+    
+    if (user == writer) {
+        //<li class="alert-dark">TEST</li> kokeilin index.htm sivulla kirjoittaa, niin tuli esim tuommonen
+        li.classList.add("alert-dark");
+    }
+    
     document.getElementById("messagesList").appendChild(li);
 });
 
