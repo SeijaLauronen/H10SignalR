@@ -15,7 +15,7 @@ namespace Harjoitus10_SignalRChat.Hubs
         //private Chat chatti = new Chat(); //ei tätä nyt tarvita
         public async Task SendMessage(string user, string message)
         {
-            var temppi = user; //Kunhan tähän vaan laittoi jotain, niin alkoi toimia, muuten chat vaan vilahti ja sulkeutui!! Missä vika?
+            //var temppi = user; //Kunhan tähän vaan laittoi jotain, niin alkoi toimia, muuten chat vaan vilahti ja sulkeutui!! Missä vika?
             await Clients.All.SendAsync("ReceiveMessage", user, message);
         }
     }

@@ -1,5 +1,5 @@
 ﻿Seija LAuronen
-/4p
+4/4p
 ********************************
 KTS: https://docs.microsoft.com/en-us/aspnet/core/tutorials/signalr?view=aspnetcore-3.1&tabs=visual-studio
 Tee WEb-sovellus, ei tarvita MVC:tä. Ladataa javascript kirjasto:
